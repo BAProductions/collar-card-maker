@@ -1,0 +1,159 @@
+:root {
+  --glow-color: #320065;
+  --border-color: #ed1f4a;
+  --accent-color: #f27aaa;
+  --bg-color: #000000;
+  --text-color: #ffffff;
+  --font-family: 'monospace', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #111;
+  font-family: var(--font-family);
+  color: var(--text-color);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.slave-card,
+.slave-card::after,
+.slave-card::before,
+.slave-card *::after,
+.slave-card *::before {
+  box-sizing: border-box;
+}
+
+/* Card styling */
+.slave-card {
+  width: 900px;
+  padding: 20px;
+  border-radius: 5px;
+  color: var(--text-color);
+  background: var(--bg-color);
+  border: 3px solid var(--border-color);
+  box-shadow: 0 0 15px 5px var(--glow-color);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--border-color);
+  box-shadow: 0 0 15px 5px var(--glow-color);
+}
+
+.name {
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.bio {
+  font-style: italic;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.card-section {
+  margin-top: 20px;
+}
+
+.card-section h3 {
+  text-transform: uppercase;
+  border-bottom: 0.05rem dashed var(--border-color);
+}
+
+ul.info-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  columns: 2;
+  column-gap: 40px;
+}
+
+ul.info-list li {
+  margin-bottom: 8px;
+}
+
+.info-label {
+  font-weight: 700;
+  color: var(--accent-color);
+  min-width: 140px;
+  display: inline-block;
+}
+
+.condition-label {
+  font-weight: 700;
+  color: var(--glow-color);
+  text-transform: uppercase;
+  margin-left: 8px;
+  font-size: 0.9rem;
+  background-color: rgba(50, 0, 101, 0.15);
+  padding: 1px 6px;
+  border-radius: 4px;
+  vertical-align: middle;
+}
+
+.schedule-grid {
+  gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+#cardContainer img {
+  width: 100%;
+  max-width: 700px;
+}
+
+.schedule-container {
+  margin: 1rem 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.schedule-legend {
+  font-weight: bold;
+  margin: 1rem;
+}
+
+.schedule-grid {
+  display: grid;
+  grid-template-columns: 50px 90px 150px 150px;
+  gap: 0.5rem 0rem;
+  align-items: center;
+  text-align: center;
+}
+
+/* Header row styling */
+.schedule-grid > div.header {
+  font-weight: bold;
+  border-bottom: 2px solid #444;
+}
+
+/* Checkbox center */
+.checkbox-cell {
+  display: flex;
+  justify-content: center;
+}
+
+::-moz-calendar-picker-indicator {
+  filter: invert(50%);
+}
+
+::-webkit-calendar-picker-indicator {
+  filter: invert(50%);
+}
