@@ -218,7 +218,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const cardDOM = document.createElement('div');
       cardDOM.innerHTML = cardHTML;
       document.body.appendChild(cardDOM); // Optional: only if you need styles applied
-      const canvas = await html2canvas(cardDOM, { backgroundColor: null });
+      const canvas = await html2canvas(cardDOM, { backgroundColor: "#000000" });
       document.body.removeChild(cardDOM); // Clean up afterward
       const imgDataUrl = canvas.toDataURL('image/png');
 
