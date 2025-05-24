@@ -8,14 +8,14 @@
 }
 
 body {
-  background: #111;
-  font-family: var(--font-family);
-  color: var(--text-color);
+  gap: 40px;
   padding: 40px;
   display: flex;
-  flex-direction: column;
+  background: #111;
   align-items: center;
-  gap: 40px;
+  flex-direction: column;
+  color: var(--text-color);
+  font-family: var(--font-family);
 }
 
 .slave-card,
@@ -37,11 +37,27 @@ body {
   box-shadow: 0 0 15px 5px var(--glow-color);
 }
 
-.header {
-  display: flex;
-  align-items: center;
+.header,
+.server-info {
   gap: 20px;
+  display: flex;
   margin-bottom: 20px;
+  align-items: center;
+}
+
+.server-info {
+  height: 64px;
+  overflow: hidden;
+  justify-content: center;
+  border-bottom: 0.05rem dashed var(--border-color);
+}
+
+.logo {
+  width: 64px;
+  height: 64px;
+  overflow: hidden;
+  object-fit: cover;
+  object-position: center center;
 }
 
 .avatar {
@@ -56,10 +72,9 @@ body {
 
 .name {
   font-size: 2.4rem;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin: 0;
   white-space: nowrap;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 .bio {
@@ -78,10 +93,10 @@ body {
 }
 
 ul.info-list {
-  list-style: none;
   padding: 0;
   margin: 0;
   columns: 2;
+  list-style: none;
   column-gap: 40px;
 }
 
@@ -91,21 +106,21 @@ ul.info-list li {
 
 .info-label {
   font-weight: 700;
-  color: var(--accent-color);
   min-width: 140px;
   display: inline-block;
+  color: var(--accent-color);
 }
 
 .condition-label {
   font-weight: 700;
-  color: var(--glow-color);
-  text-transform: uppercase;
   margin-left: 8px;
   font-size: 0.9rem;
-  background-color: rgba(50, 0, 101, 0.15);
   padding: 1px 6px;
   border-radius: 4px;
   vertical-align: middle;
+  text-transform: uppercase;
+  color: var(--glow-color);
+  background-color: rgba(50, 0, 101, 0.15);
 }
 
 .schedule-grid {
@@ -121,21 +136,21 @@ ul.info-list li {
 
 .schedule-container {
   margin: 1rem 0;
-  border: 1px solid #ccc;
   border-radius: 8px;
+  border: 1px solid #ccc;
 }
 
 .schedule-legend {
-  font-weight: bold;
   margin: 1rem;
+  font-weight: bold;
 }
 
 .schedule-grid {
   display: grid;
-  grid-template-columns: 50px 90px 150px 150px;
   gap: 0.5rem 0rem;
-  align-items: center;
   text-align: center;
+  align-items: center;
+  grid-template-columns: 50px 90px 150px 150px;
 }
 
 /* Header row styling */

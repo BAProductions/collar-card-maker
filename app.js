@@ -155,6 +155,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // Build the card HTML
     const cardHTML = `
       <article class="slave-card" tabindex="0" aria-label="Slave Card for ${formData.get('name') || 'Unknown'}">
+        <div class="server-info">
+            <img src="logo.png" alt="Build A Fem Slave ID Logo" class="logo" />
+            <h2 class="name">Build A Fem Slave ID</h2>
+        </div>
         <div class="header">
           <img src="${avatarUrl}" alt="Avatar of ${formData.get('name') || 'Unknown'}" class="avatar" />
           <div class="user-info">
