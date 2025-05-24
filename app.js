@@ -221,6 +221,7 @@ document.addEventListener('DOMContentLoaded', () => {
       cardImage.src = imgDataUrl;
 
       downloadLink.href = imgDataUrl;
+      downloadLink.classList.remove('disabled');
       const name = formData.get('name')?.toString().trim();
       downloadLink.download = `${name || 'slave'}-slave-card.png`;
 
